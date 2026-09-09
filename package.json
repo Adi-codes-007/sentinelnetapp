@@ -8,8 +8,10 @@
     "dev": "npm --prefix server run dev",
     "start": "npm --prefix server start",
     "seed": "npm --prefix server run seed",
-    "test": "npm --prefix server test"
+    "test": "npm --prefix server test",
+    "build": "node -e \"console.log('SentinelNet build ready')\""
   },
+
 
   "dependencies": {
     "bcryptjs": "^2.4.3",
