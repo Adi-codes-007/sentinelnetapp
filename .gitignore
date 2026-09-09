@@ -1,0 +1,13 @@
+node_modules/
+server/src/data/db.json
+server/src/data/*.json
+.env
+.env.local
+.env.*.local
+server/.env
+server/.env.local
+server/.env.*.local
+server/tests/tmp-test-db*.json
+*.log
+.DS_Store
+.vercel

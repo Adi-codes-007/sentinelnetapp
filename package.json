@@ -1,0 +1,29 @@
+{
+  "name": "sentinelnet",
+  "version": "1.0.0",
+  "description": "SentinelNet — AI-Powered Criminal Network Intelligence & Investigation Platform",
+  "private": true,
+  "main": "api/index.js",
+  "scripts": {
+    "dev": "npm --prefix server run dev",
+    "start": "npm --prefix server start",
+    "seed": "npm --prefix server run seed",
+    "test": "npm --prefix server test",
+    "build": "cd server && npm install"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "groq-sdk": "^0.3.3",
+    "jsonwebtoken": "^9.0.2",
+    "lowdb": "^1.0.0",
+    "multer": "^1.4.5-lts.1",
+    "nanoid": "^3.3.7",
+    "papaparse": "^5.4.1",
+    "pg": "^8.13.1",
+    "socket.io": "^4.7.5",
+    "string-similarity": "^4.0.4"
+  }
+}
