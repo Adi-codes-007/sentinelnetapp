@@ -10,10 +10,15 @@ const config = require('./config');
 // Pre-load default seed data bundled with the application so bundler packages it
 let initialSeedData = {};
 try {
-  initialSeedData = require('./data/db.json');
+  initialSeedData = require('./default-seed.json');
 } catch (e) {
-  initialSeedData = {};
+  try {
+    initialSeedData = require('./data/db.json');
+  } catch (err) {
+    initialSeedData = {};
+  }
 }
+
 
 let db;
 try {

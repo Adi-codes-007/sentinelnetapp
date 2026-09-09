@@ -8,9 +8,9 @@
     "dev": "npm --prefix server run dev",
     "start": "npm --prefix server start",
     "seed": "npm --prefix server run seed",
-    "test": "npm --prefix server test",
-    "build": "cd server && npm install"
+    "test": "npm --prefix server test"
   },
+
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",

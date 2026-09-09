@@ -1,0 +1,2553 @@
+{
+  "users": [
+    {
+      "id": "INV-104",
+      "name": "R. Deshmukh",
+      "role": "investigator",
+      "passwordHash": "$2a$10$jm0Pt546n49Fg4JQ3KcgwuOy0I2LPIc8i9O./NJsesIpyhdlfn50i"
+    },
+    {
+      "id": "SUP-021",
+      "name": "K. Bhatnagar",
+      "role": "senior_investigator",
+      "passwordHash": "$2a$10$qQ6OigOTqekrnstJ8QzUx.R9dPLKyr60SaNrxYt7k0SR0YKa6ZBIG"
+    },
+    {
+      "id": "AN-221",
+      "name": "S. Iyer",
+      "role": "analyst",
+      "passwordHash": "$2a$10$qOcsA4sUlifQr0HVDeOymujrLrkG6U19IgT/jSGXCvcRfVZxsStVy"
+    },
+    {
+      "id": "ADM-001",
+      "name": "A. Fernandes",
+      "role": "admin",
+      "passwordHash": "$2a$10$ZKbhSL0YstD/p6s8obiHHeBKSBqvf5ufSDZ/vXWWODWJwi8uxrEQS"
+    }
+  ],
+  "cases": [
+    {
+      "id": "CASE-2026-00421",
+      "title": "Organized Financial Fraud Network",
+      "type": "Financial Fraud",
+      "unit": "Economic Offences Wing",
+      "priority": "High",
+      "status": "Active",
+      "createdAt": "2026-09-09T12:57:42.989Z",
+      "updatedAt": "2026-09-09T12:57:42.990Z",
+      "createdBy": "ADM-001"
+    },
+    {
+      "id": "CASE-2026-00435",
+      "title": "Suspicious Cross-Border Fund Movement",
+      "type": "Financial Fraud",
+      "unit": "Economic Offences Wing",
+      "priority": "Medium",
+      "status": "Active",
+      "createdAt": "2026-09-09T12:57:42.992Z",
+      "updatedAt": "2026-09-09T12:57:42.992Z",
+      "createdBy": "ADM-001"
+    }
+  ],
+  "case_access": [
+    {
+      "userId": "INV-104",
+      "caseId": "CASE-2026-00421",
+      "roleAtCase": "investigator",
+      "fullPiiAccess": true
+    },
+    {
+      "userId": "SUP-021",
+      "caseId": "CASE-2026-00421",
+      "roleAtCase": "senior_investigator",
+      "fullPiiAccess": true
+    },
+    {
+      "userId": "AN-221",
+      "caseId": "CASE-2026-00421",
+      "roleAtCase": "analyst",
+      "fullPiiAccess": false
+    },
+    {
+      "userId": "ADM-001",
+      "caseId": "CASE-2026-00421",
+      "roleAtCase": "admin",
+      "fullPiiAccess": false
+    },
+    {
+      "userId": "INV-104",
+      "caseId": "CASE-2026-00435",
+      "roleAtCase": "investigator",
+      "fullPiiAccess": true
+    },
+    {
+      "userId": "SUP-021",
+      "caseId": "CASE-2026-00435",
+      "roleAtCase": "senior_investigator",
+      "fullPiiAccess": true
+    },
+    {
+      "userId": "AN-221",
+      "caseId": "CASE-2026-00435",
+      "roleAtCase": "analyst",
+      "fullPiiAccess": false
+    },
+    {
+      "userId": "ADM-001",
+      "caseId": "CASE-2026-00435",
+      "roleAtCase": "admin",
+      "fullPiiAccess": false
+    }
+  ],
+  "documents": [
+    {
+      "id": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "name": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "srcType": "CDR",
+      "uploadedBy": "AN-221",
+      "uploadedAt": "2026-09-09T12:57:43.017Z",
+      "status": "COMPLETE",
+      "fileHash": "8ae0be38cec4f2f20f0400c7115ac38abe6622f7f79a94b37a0d050385485656",
+      "jobId": "JOB-00001",
+      "rowCount": 27,
+      "entitiesCreated": 9,
+      "relationshipsCreated": 14,
+      "evidenceCreated": 27,
+      "error": null,
+      "columnMap": {
+        "caller": "caller",
+        "receiver": "receiver",
+        "payer": null,
+        "payee": null,
+        "generic_from": null,
+        "generic_to": null,
+        "amount": null,
+        "timestamp": "timestamp",
+        "duration": "duration_sec",
+        "location": "location",
+        "caseId": null
+      },
+      "rawText": "timestamp,caller,receiver,duration_sec,location\n2026-08-12 09:14:22,9899001101,9899002202,142,Andheri_W\n2026-08-12 11:02:10,9899002202,9899003303,58,Dadar_E\n2026-08-12 14:20:05,9899001101,9899002202,210,Andheri_W\n2026-08-13 08:45:00,9899003303,9899004404,301,Kurla_W\n2026-08-13 09:10:44,9899001101,9899002202,44,Andheri_W\n2026-08-13 17:41:10,9899001101,9899002202,65,Andheri_W\n2026-08-13 17:43:08,9899002202,9899003303,38,Dadar_E\n2026-08-13 17:45:22,9899003303,9899004404,120,Kurla_W\n2026-08-13 17:47:01,9899001101,9899002202,29,Andheri_W\n2026-08-13 17:49:55,9899001101,9899002202,71,Andheri_W\n2026-08-13 17:52:14,9899001101,9899002202,19,Andheri_W\n2026-08-13 17:55:37,9899001101,9899002202,88,Andheri_W\n2026-08-13 17:58:02,9899001101,9899002202,33,Andheri_W\n2026-08-13 18:01:19,9899001101,9899002202,52,Andheri_W\n2026-08-13 18:03:47,9899001101,9899002202,60,Andheri_W\n2026-08-13 18:06:12,9899001101,9899002202,15,Andheri_W\n2026-08-14 10:15:00,9899004404,9899005505,205,Powai\n2026-08-14 12:40:33,9899005505,9899006606,90,Vashi\n2026-08-14 15:12:19,9899002202,9899006606,140,Vashi\n2026-08-15 09:00:00,9899001101,9899007707,60,Andheri_W\n2026-08-15 09:30:00,9899007707,9899008808,180,Borivali_E\n2026-08-15 11:20:00,9899003303,9899007707,95,Kurla_W\n2026-08-16 08:10:00,9899006606,9899009909,220,Vashi\n2026-08-16 09:45:00,9899009909,9899001101,75,Nashik_Rd\n2026-08-16 13:05:00,9899004404,9899009909,130,Powai\n2026-08-16 16:22:00,9899005505,9899008808,44,Vashi\n2026-08-17 07:50:00,9899007707,9899009909,66,Borivali_E\n",
+      "ingestMode": "CDR",
+      "dataQuality": {
+        "completeness": 100,
+        "identifierValidity": 100,
+        "timestampValidity": 100,
+        "duplicateRate": 100,
+        "overall": 100
+      }
+    },
+    {
+      "id": "DOC-0002",
+      "caseId": "CASE-2026-00435",
+      "name": "SentinelNet_demo_CDR_CASE-2026-00435.csv",
+      "srcType": "CDR",
+      "uploadedBy": "AN-221",
+      "uploadedAt": "2026-09-09T12:57:52.749Z",
+      "status": "COMPLETE",
+      "fileHash": "3c2383bfee711fef1c863e35805ec8cdca0a941b876c1c6d1d3c6a2d42398ed7",
+      "jobId": "JOB-00002",
+      "rowCount": 6,
+      "entitiesCreated": 4,
+      "relationshipsCreated": 5,
+      "evidenceCreated": 6,
+      "error": null,
+      "columnMap": {
+        "caller": "caller",
+        "receiver": "receiver",
+        "payer": null,
+        "payee": null,
+        "generic_from": null,
+        "generic_to": null,
+        "amount": null,
+        "timestamp": "timestamp",
+        "duration": "duration_sec",
+        "location": "location",
+        "caseId": null
+      },
+      "rawText": "timestamp,caller,receiver,duration_sec,location\n2026-08-10 10:00:00,9899002202,9899011011,50,Thane_W\n2026-08-10 10:20:00,9899011011,9899012012,80,Nagpur_Wh\n2026-08-11 09:15:00,9899002202,9899011011,44,Thane_W\n2026-08-11 14:30:00,9899012012,9899013013,120,Pune_Rd\n2026-08-12 08:00:00,9899011011,9899013013,66,Nagpur_Wh\n2026-08-12 18:45:00,9899002202,9899012012,95,Thane_W\n",
+      "ingestMode": "CDR",
+      "dataQuality": {
+        "completeness": 100,
+        "identifierValidity": 100,
+        "timestampValidity": 100,
+        "duplicateRate": 100,
+        "overall": 100
+      }
+    },
+    {
+      "id": "DOC-0003",
+      "caseId": "CASE-2026-00421",
+      "name": "live-test.csv",
+      "srcType": "CDR",
+      "uploadedBy": "INV-104",
+      "uploadedAt": "2026-09-09T13:04:57.087Z",
+      "status": "COMPLETE",
+      "fileHash": "92abd493c5ccad86f12088a2018eaec270c2fdbc4eae6116c1d1440e123d50eb",
+      "jobId": "JOB-00003",
+      "rowCount": 3,
+      "entitiesCreated": 3,
+      "relationshipsCreated": 3,
+      "evidenceCreated": 3,
+      "error": null,
+      "columnMap": {
+        "caller": "caller",
+        "receiver": "receiver",
+        "payer": null,
+        "payee": null,
+        "generic_from": null,
+        "generic_to": null,
+        "amount": null,
+        "timestamp": "timestamp",
+        "duration": "duration_sec",
+        "location": "location",
+        "caseId": null
+      },
+      "rawText": "timestamp,caller,receiver,duration_sec,location\n2026-01-05 14:00:00,9876543210,9876543211,75,Tower-North\n2026-01-05 14:30:00,9876543211,9876543212,120,Tower-East\n2026-01-05 15:00:00,9876543210,9876543212,45,Tower-Central",
+      "ingestMode": "CDR",
+      "dataQuality": {
+        "completeness": 100,
+        "identifierValidity": 100,
+        "timestampValidity": 100,
+        "duplicateRate": 100,
+        "overall": 100
+      }
+    }
+  ],
+  "source_records": [],
+  "entities": [
+    {
+      "id": "ENT-00001",
+      "type": "PHONE",
+      "canonical": "+919899001101",
+      "originalValues": [
+        "9899001101"
+      ],
+      "confidence": 100,
+      "sources": [
+        "DOC-0001"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "firstSeen": "2026-08-12T03:44:22.000Z",
+      "lastSeen": "2026-08-16T04:15:00.000Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00002",
+      "type": "PHONE",
+      "canonical": "+919899002202",
+      "originalValues": [
+        "9899002202"
+      ],
+      "confidence": 100,
+      "sources": [
+        "DOC-0001",
+        "DOC-0002"
+      ],
+      "caseIds": [
+        "CASE-2026-00421",
+        "CASE-2026-00435"
+      ],
+      "firstSeen": "2026-08-10T04:30:00.000Z",
+      "lastSeen": "2026-08-14T09:42:19.000Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00003",
+      "type": "PHONE",
+      "canonical": "+919899003303",
+      "originalValues": [
+        "9899003303"
+      ],
+      "confidence": 100,
+      "sources": [
+        "DOC-0001"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "firstSeen": "2026-08-12T05:32:10.000Z",
+      "lastSeen": "2026-08-15T05:50:00.000Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00004",
+      "type": "PHONE",
+      "canonical": "+919899004404",
+      "originalValues": [
+        "9899004404"
+      ],
+      "confidence": 100,
+      "sources": [
+        "DOC-0001"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "firstSeen": "2026-08-13T03:15:00.000Z",
+      "lastSeen": "2026-08-16T07:35:00.000Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00005",
+      "type": "PHONE",
+      "canonical": "+919899005505",
+      "originalValues": [
+        "9899005505"
+      ],
+      "confidence": 100,
+      "sources": [
+        "DOC-0001"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "firstSeen": "2026-08-14T04:45:00.000Z",
+      "lastSeen": "2026-08-16T10:52:00.000Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00006",
+      "type": "PHONE",
+      "canonical": "+919899006606",
+      "originalValues": [
+        "9899006606"
+      ],
+      "confidence": 100,
+      "sources": [
+        "DOC-0001"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "firstSeen": "2026-08-14T07:10:33.000Z",
+      "lastSeen": "2026-08-16T02:40:00.000Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00007",
+      "type": "PHONE",
+      "canonical": "+919899007707",
+      "originalValues": [
+        "9899007707"
+      ],
+      "confidence": 100,
+      "sources": [
+        "DOC-0001"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "firstSeen": "2026-08-15T03:30:00.000Z",
+      "lastSeen": "2026-08-17T02:20:00.000Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00008",
+      "type": "PHONE",
+      "canonical": "+919899008808",
+      "originalValues": [
+        "9899008808"
+      ],
+      "confidence": 100,
+      "sources": [
+        "DOC-0001"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "firstSeen": "2026-08-15T04:00:00.000Z",
+      "lastSeen": "2026-08-16T10:52:00.000Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00009",
+      "type": "PHONE",
+      "canonical": "+919899009909",
+      "originalValues": [
+        "9899009909"
+      ],
+      "confidence": 100,
+      "sources": [
+        "DOC-0001"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "firstSeen": "2026-08-16T02:40:00.000Z",
+      "lastSeen": "2026-08-17T02:20:00.000Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00010",
+      "type": "PHONE",
+      "canonical": "+919899011011",
+      "originalValues": [
+        "9899011011"
+      ],
+      "confidence": 100,
+      "sources": [
+        "DOC-0002"
+      ],
+      "caseIds": [
+        "CASE-2026-00435"
+      ],
+      "firstSeen": "2026-08-10T04:30:00.000Z",
+      "lastSeen": "2026-08-12T02:30:00.000Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00011",
+      "type": "PHONE",
+      "canonical": "+919899012012",
+      "originalValues": [
+        "9899012012"
+      ],
+      "confidence": 100,
+      "sources": [
+        "DOC-0002"
+      ],
+      "caseIds": [
+        "CASE-2026-00435"
+      ],
+      "firstSeen": "2026-08-10T04:50:00.000Z",
+      "lastSeen": "2026-08-12T13:15:00.000Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00012",
+      "type": "PHONE",
+      "canonical": "+919899013013",
+      "originalValues": [
+        "9899013013"
+      ],
+      "confidence": 100,
+      "sources": [
+        "DOC-0002"
+      ],
+      "caseIds": [
+        "CASE-2026-00435"
+      ],
+      "firstSeen": "2026-08-11T09:00:00.000Z",
+      "lastSeen": "2026-08-12T02:30:00.000Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00013",
+      "type": "PERSON",
+      "canonical": "Abdul Rahim",
+      "originalValues": [
+        "Abdul Rahim"
+      ],
+      "confidence": 90,
+      "sources": [
+        "FIR-2026-00088"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "firstSeen": null,
+      "lastSeen": null,
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00014",
+      "type": "PERSON",
+      "canonical": "Abdul Rahim Khan",
+      "originalValues": [
+        "Abdul Rahim Khan"
+      ],
+      "confidence": 90,
+      "sources": [
+        "CDR_2026_08.csv"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "firstSeen": null,
+      "lastSeen": null,
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00015",
+      "type": "PERSON",
+      "canonical": "A. Rahim",
+      "originalValues": [
+        "A. Rahim"
+      ],
+      "confidence": 90,
+      "sources": [
+        "Surveillance Report SR-14"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "firstSeen": null,
+      "lastSeen": null,
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00016",
+      "type": "PERSON",
+      "canonical": "Rakesh Verma",
+      "originalValues": [
+        "Rakesh Verma"
+      ],
+      "confidence": 90,
+      "sources": [
+        "Financial_Records_Q3.xlsx"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "firstSeen": null,
+      "lastSeen": null,
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00017",
+      "type": "PHONE",
+      "canonical": "+919876543210",
+      "originalValues": [
+        "9876543210"
+      ],
+      "confidence": 100,
+      "sources": [
+        "DOC-0003"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "firstSeen": "2026-01-05T08:30:00.000Z",
+      "lastSeen": "2026-01-05T09:30:00.000Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00018",
+      "type": "PHONE",
+      "canonical": "+919876543211",
+      "originalValues": [
+        "9876543211"
+      ],
+      "confidence": 100,
+      "sources": [
+        "DOC-0003"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "firstSeen": "2026-01-05T08:30:00.000Z",
+      "lastSeen": "2026-01-05T09:00:00.000Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "ENT-00019",
+      "type": "PHONE",
+      "canonical": "+919876543212",
+      "originalValues": [
+        "9876543212"
+      ],
+      "confidence": 100,
+      "sources": [
+        "DOC-0003"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "firstSeen": "2026-01-05T09:00:00.000Z",
+      "lastSeen": "2026-01-05T09:30:00.000Z",
+      "status": "ACTIVE"
+    }
+  ],
+  "entity_identifiers": [],
+  "relationships": [
+    {
+      "id": "REL-00001",
+      "entityA": "ENT-00001",
+      "entityB": "ENT-00002",
+      "type": "COMMUNICATION",
+      "interactions": 12,
+      "totalDuration": 828,
+      "firstSeen": "2026-08-12T03:44:22.000Z",
+      "lastSeen": "2026-08-13T12:36:12.000Z",
+      "evidenceIds": [
+        "EV-DOC-0001-0001",
+        "EV-DOC-0001-0003",
+        "EV-DOC-0001-0005",
+        "EV-DOC-0001-0006",
+        "EV-DOC-0001-0009",
+        "EV-DOC-0001-0010",
+        "EV-DOC-0001-0011",
+        "EV-DOC-0001-0012",
+        "EV-DOC-0001-0013",
+        "EV-DOC-0001-0014",
+        "EV-DOC-0001-0015",
+        "EV-DOC-0001-0016"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 53,
+      "band": "MEDIUM",
+      "scoreBreakdown": {
+        "communicationStrength": 81,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 90,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00002",
+      "entityA": "ENT-00002",
+      "entityB": "ENT-00003",
+      "type": "COMMUNICATION",
+      "interactions": 2,
+      "totalDuration": 96,
+      "firstSeen": "2026-08-12T05:32:10.000Z",
+      "lastSeen": "2026-08-13T12:13:08.000Z",
+      "evidenceIds": [
+        "EV-DOC-0001-0002",
+        "EV-DOC-0001-0007"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 24,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 35,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00003",
+      "entityA": "ENT-00003",
+      "entityB": "ENT-00004",
+      "type": "COMMUNICATION",
+      "interactions": 2,
+      "totalDuration": 421,
+      "firstSeen": "2026-08-13T03:15:00.000Z",
+      "lastSeen": "2026-08-13T12:15:22.000Z",
+      "evidenceIds": [
+        "EV-DOC-0001-0004",
+        "EV-DOC-0001-0008"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 24,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 35,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00004",
+      "entityA": "ENT-00004",
+      "entityB": "ENT-00005",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 205,
+      "firstSeen": "2026-08-14T04:45:00.000Z",
+      "lastSeen": "2026-08-14T04:45:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0001-0017"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00005",
+      "entityA": "ENT-00005",
+      "entityB": "ENT-00006",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 90,
+      "firstSeen": "2026-08-14T07:10:33.000Z",
+      "lastSeen": "2026-08-14T07:10:33.000Z",
+      "evidenceIds": [
+        "EV-DOC-0001-0018"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00006",
+      "entityA": "ENT-00002",
+      "entityB": "ENT-00006",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 140,
+      "firstSeen": "2026-08-14T09:42:19.000Z",
+      "lastSeen": "2026-08-14T09:42:19.000Z",
+      "evidenceIds": [
+        "EV-DOC-0001-0019"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00007",
+      "entityA": "ENT-00001",
+      "entityB": "ENT-00007",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 60,
+      "firstSeen": "2026-08-15T03:30:00.000Z",
+      "lastSeen": "2026-08-15T03:30:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0001-0020"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00008",
+      "entityA": "ENT-00007",
+      "entityB": "ENT-00008",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 180,
+      "firstSeen": "2026-08-15T04:00:00.000Z",
+      "lastSeen": "2026-08-15T04:00:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0001-0021"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00009",
+      "entityA": "ENT-00003",
+      "entityB": "ENT-00007",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 95,
+      "firstSeen": "2026-08-15T05:50:00.000Z",
+      "lastSeen": "2026-08-15T05:50:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0001-0022"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00010",
+      "entityA": "ENT-00006",
+      "entityB": "ENT-00009",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 220,
+      "firstSeen": "2026-08-16T02:40:00.000Z",
+      "lastSeen": "2026-08-16T02:40:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0001-0023"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00011",
+      "entityA": "ENT-00001",
+      "entityB": "ENT-00009",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 75,
+      "firstSeen": "2026-08-16T04:15:00.000Z",
+      "lastSeen": "2026-08-16T04:15:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0001-0024"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00012",
+      "entityA": "ENT-00004",
+      "entityB": "ENT-00009",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 130,
+      "firstSeen": "2026-08-16T07:35:00.000Z",
+      "lastSeen": "2026-08-16T07:35:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0001-0025"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00013",
+      "entityA": "ENT-00005",
+      "entityB": "ENT-00008",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 44,
+      "firstSeen": "2026-08-16T10:52:00.000Z",
+      "lastSeen": "2026-08-16T10:52:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0001-0026"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00014",
+      "entityA": "ENT-00007",
+      "entityB": "ENT-00009",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 66,
+      "firstSeen": "2026-08-17T02:20:00.000Z",
+      "lastSeen": "2026-08-17T02:20:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0001-0027"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00015",
+      "entityA": "ENT-00002",
+      "entityB": "ENT-00010",
+      "type": "COMMUNICATION",
+      "interactions": 2,
+      "totalDuration": 94,
+      "firstSeen": "2026-08-10T04:30:00.000Z",
+      "lastSeen": "2026-08-11T03:45:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0002-0001",
+        "EV-DOC-0002-0003"
+      ],
+      "caseIds": [
+        "CASE-2026-00435"
+      ],
+      "confidence": 49,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 35,
+        "crossCaseRelevance": 100,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00016",
+      "entityA": "ENT-00010",
+      "entityB": "ENT-00011",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 80,
+      "firstSeen": "2026-08-10T04:50:00.000Z",
+      "lastSeen": "2026-08-10T04:50:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0002-0002"
+      ],
+      "caseIds": [
+        "CASE-2026-00435"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00017",
+      "entityA": "ENT-00011",
+      "entityB": "ENT-00012",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 120,
+      "firstSeen": "2026-08-11T09:00:00.000Z",
+      "lastSeen": "2026-08-11T09:00:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0002-0004"
+      ],
+      "caseIds": [
+        "CASE-2026-00435"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00018",
+      "entityA": "ENT-00010",
+      "entityB": "ENT-00012",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 66,
+      "firstSeen": "2026-08-12T02:30:00.000Z",
+      "lastSeen": "2026-08-12T02:30:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0002-0005"
+      ],
+      "caseIds": [
+        "CASE-2026-00435"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00019",
+      "entityA": "ENT-00002",
+      "entityB": "ENT-00011",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 95,
+      "firstSeen": "2026-08-12T13:15:00.000Z",
+      "lastSeen": "2026-08-12T13:15:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0002-0006"
+      ],
+      "caseIds": [
+        "CASE-2026-00435"
+      ],
+      "confidence": 46,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 100,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00020",
+      "entityA": "ENT-00017",
+      "entityB": "ENT-00018",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 75,
+      "firstSeen": "2026-01-05T08:30:00.000Z",
+      "lastSeen": "2026-01-05T08:30:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0003-0001"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00021",
+      "entityA": "ENT-00018",
+      "entityB": "ENT-00019",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 120,
+      "firstSeen": "2026-01-05T09:00:00.000Z",
+      "lastSeen": "2026-01-05T09:00:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0003-0002"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    },
+    {
+      "id": "REL-00022",
+      "entityA": "ENT-00017",
+      "entityB": "ENT-00019",
+      "type": "COMMUNICATION",
+      "interactions": 1,
+      "totalDuration": 45,
+      "firstSeen": "2026-01-05T09:30:00.000Z",
+      "lastSeen": "2026-01-05T09:30:00.000Z",
+      "evidenceIds": [
+        "EV-DOC-0003-0003"
+      ],
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "confidence": 21,
+      "band": "LOW",
+      "scoreBreakdown": {
+        "communicationStrength": 22,
+        "crossCaseRelevance": 0,
+        "temporalCorrelation": 0,
+        "locationCorrelation": 0,
+        "entityConfidence": 100
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EV-DOC-0001-0001",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 1,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899001101",
+        "receiver": "9899002202",
+        "timestamp": "2026-08-12 09:14:22",
+        "duration": "142",
+        "amount": null,
+        "location": "Andheri_W"
+      },
+      "ts": "2026-08-12T03:44:22.000Z",
+      "integrity": "VERIFIED",
+      "hash": "032ae2577c34d186"
+    },
+    {
+      "id": "EV-DOC-0001-0002",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 2,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899002202",
+        "receiver": "9899003303",
+        "timestamp": "2026-08-12 11:02:10",
+        "duration": "58",
+        "amount": null,
+        "location": "Dadar_E"
+      },
+      "ts": "2026-08-12T05:32:10.000Z",
+      "integrity": "VERIFIED",
+      "hash": "1f2d1245a6671489"
+    },
+    {
+      "id": "EV-DOC-0001-0003",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 3,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899001101",
+        "receiver": "9899002202",
+        "timestamp": "2026-08-12 14:20:05",
+        "duration": "210",
+        "amount": null,
+        "location": "Andheri_W"
+      },
+      "ts": "2026-08-12T08:50:05.000Z",
+      "integrity": "VERIFIED",
+      "hash": "cce1fe37add3985a"
+    },
+    {
+      "id": "EV-DOC-0001-0004",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 4,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899003303",
+        "receiver": "9899004404",
+        "timestamp": "2026-08-13 08:45:00",
+        "duration": "301",
+        "amount": null,
+        "location": "Kurla_W"
+      },
+      "ts": "2026-08-13T03:15:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "60156cd63b5d53f9"
+    },
+    {
+      "id": "EV-DOC-0001-0005",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 5,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899001101",
+        "receiver": "9899002202",
+        "timestamp": "2026-08-13 09:10:44",
+        "duration": "44",
+        "amount": null,
+        "location": "Andheri_W"
+      },
+      "ts": "2026-08-13T03:40:44.000Z",
+      "integrity": "VERIFIED",
+      "hash": "ab573215c52bf3b8"
+    },
+    {
+      "id": "EV-DOC-0001-0006",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 6,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899001101",
+        "receiver": "9899002202",
+        "timestamp": "2026-08-13 17:41:10",
+        "duration": "65",
+        "amount": null,
+        "location": "Andheri_W"
+      },
+      "ts": "2026-08-13T12:11:10.000Z",
+      "integrity": "VERIFIED",
+      "hash": "864f8bcbc405c234"
+    },
+    {
+      "id": "EV-DOC-0001-0007",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 7,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899002202",
+        "receiver": "9899003303",
+        "timestamp": "2026-08-13 17:43:08",
+        "duration": "38",
+        "amount": null,
+        "location": "Dadar_E"
+      },
+      "ts": "2026-08-13T12:13:08.000Z",
+      "integrity": "VERIFIED",
+      "hash": "f206eee61e04f395"
+    },
+    {
+      "id": "EV-DOC-0001-0008",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 8,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899003303",
+        "receiver": "9899004404",
+        "timestamp": "2026-08-13 17:45:22",
+        "duration": "120",
+        "amount": null,
+        "location": "Kurla_W"
+      },
+      "ts": "2026-08-13T12:15:22.000Z",
+      "integrity": "VERIFIED",
+      "hash": "b0ae90ea551cda3d"
+    },
+    {
+      "id": "EV-DOC-0001-0009",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 9,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899001101",
+        "receiver": "9899002202",
+        "timestamp": "2026-08-13 17:47:01",
+        "duration": "29",
+        "amount": null,
+        "location": "Andheri_W"
+      },
+      "ts": "2026-08-13T12:17:01.000Z",
+      "integrity": "VERIFIED",
+      "hash": "174cebcb45adeb5d"
+    },
+    {
+      "id": "EV-DOC-0001-0010",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 10,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899001101",
+        "receiver": "9899002202",
+        "timestamp": "2026-08-13 17:49:55",
+        "duration": "71",
+        "amount": null,
+        "location": "Andheri_W"
+      },
+      "ts": "2026-08-13T12:19:55.000Z",
+      "integrity": "VERIFIED",
+      "hash": "c30162cdc394cccf"
+    },
+    {
+      "id": "EV-DOC-0001-0011",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 11,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899001101",
+        "receiver": "9899002202",
+        "timestamp": "2026-08-13 17:52:14",
+        "duration": "19",
+        "amount": null,
+        "location": "Andheri_W"
+      },
+      "ts": "2026-08-13T12:22:14.000Z",
+      "integrity": "VERIFIED",
+      "hash": "f57b2b9604685402"
+    },
+    {
+      "id": "EV-DOC-0001-0012",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 12,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899001101",
+        "receiver": "9899002202",
+        "timestamp": "2026-08-13 17:55:37",
+        "duration": "88",
+        "amount": null,
+        "location": "Andheri_W"
+      },
+      "ts": "2026-08-13T12:25:37.000Z",
+      "integrity": "VERIFIED",
+      "hash": "856145f5b0a4b51b"
+    },
+    {
+      "id": "EV-DOC-0001-0013",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 13,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899001101",
+        "receiver": "9899002202",
+        "timestamp": "2026-08-13 17:58:02",
+        "duration": "33",
+        "amount": null,
+        "location": "Andheri_W"
+      },
+      "ts": "2026-08-13T12:28:02.000Z",
+      "integrity": "VERIFIED",
+      "hash": "9edd51574b672fb5"
+    },
+    {
+      "id": "EV-DOC-0001-0014",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 14,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899001101",
+        "receiver": "9899002202",
+        "timestamp": "2026-08-13 18:01:19",
+        "duration": "52",
+        "amount": null,
+        "location": "Andheri_W"
+      },
+      "ts": "2026-08-13T12:31:19.000Z",
+      "integrity": "VERIFIED",
+      "hash": "850306e039ac96ff"
+    },
+    {
+      "id": "EV-DOC-0001-0015",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 15,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899001101",
+        "receiver": "9899002202",
+        "timestamp": "2026-08-13 18:03:47",
+        "duration": "60",
+        "amount": null,
+        "location": "Andheri_W"
+      },
+      "ts": "2026-08-13T12:33:47.000Z",
+      "integrity": "VERIFIED",
+      "hash": "ae1decc3386b73c9"
+    },
+    {
+      "id": "EV-DOC-0001-0016",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 16,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899001101",
+        "receiver": "9899002202",
+        "timestamp": "2026-08-13 18:06:12",
+        "duration": "15",
+        "amount": null,
+        "location": "Andheri_W"
+      },
+      "ts": "2026-08-13T12:36:12.000Z",
+      "integrity": "VERIFIED",
+      "hash": "e9d27a9fd23db6d2"
+    },
+    {
+      "id": "EV-DOC-0001-0017",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 17,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899004404",
+        "receiver": "9899005505",
+        "timestamp": "2026-08-14 10:15:00",
+        "duration": "205",
+        "amount": null,
+        "location": "Powai"
+      },
+      "ts": "2026-08-14T04:45:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "79a0465db8894ed4"
+    },
+    {
+      "id": "EV-DOC-0001-0018",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 18,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899005505",
+        "receiver": "9899006606",
+        "timestamp": "2026-08-14 12:40:33",
+        "duration": "90",
+        "amount": null,
+        "location": "Vashi"
+      },
+      "ts": "2026-08-14T07:10:33.000Z",
+      "integrity": "VERIFIED",
+      "hash": "0545a98e3890f981"
+    },
+    {
+      "id": "EV-DOC-0001-0019",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 19,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899002202",
+        "receiver": "9899006606",
+        "timestamp": "2026-08-14 15:12:19",
+        "duration": "140",
+        "amount": null,
+        "location": "Vashi"
+      },
+      "ts": "2026-08-14T09:42:19.000Z",
+      "integrity": "VERIFIED",
+      "hash": "9deb4c8ef178b80c"
+    },
+    {
+      "id": "EV-DOC-0001-0020",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 20,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899001101",
+        "receiver": "9899007707",
+        "timestamp": "2026-08-15 09:00:00",
+        "duration": "60",
+        "amount": null,
+        "location": "Andheri_W"
+      },
+      "ts": "2026-08-15T03:30:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "c59bc4cabbc9e17e"
+    },
+    {
+      "id": "EV-DOC-0001-0021",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 21,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899007707",
+        "receiver": "9899008808",
+        "timestamp": "2026-08-15 09:30:00",
+        "duration": "180",
+        "amount": null,
+        "location": "Borivali_E"
+      },
+      "ts": "2026-08-15T04:00:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "d3e455e6162f9af7"
+    },
+    {
+      "id": "EV-DOC-0001-0022",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 22,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899003303",
+        "receiver": "9899007707",
+        "timestamp": "2026-08-15 11:20:00",
+        "duration": "95",
+        "amount": null,
+        "location": "Kurla_W"
+      },
+      "ts": "2026-08-15T05:50:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "dba2284262cb6251"
+    },
+    {
+      "id": "EV-DOC-0001-0023",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 23,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899006606",
+        "receiver": "9899009909",
+        "timestamp": "2026-08-16 08:10:00",
+        "duration": "220",
+        "amount": null,
+        "location": "Vashi"
+      },
+      "ts": "2026-08-16T02:40:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "f06f86f9cbe1305c"
+    },
+    {
+      "id": "EV-DOC-0001-0024",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 24,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899009909",
+        "receiver": "9899001101",
+        "timestamp": "2026-08-16 09:45:00",
+        "duration": "75",
+        "amount": null,
+        "location": "Nashik_Rd"
+      },
+      "ts": "2026-08-16T04:15:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "b34632bab9d7b482"
+    },
+    {
+      "id": "EV-DOC-0001-0025",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 25,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899004404",
+        "receiver": "9899009909",
+        "timestamp": "2026-08-16 13:05:00",
+        "duration": "130",
+        "amount": null,
+        "location": "Powai"
+      },
+      "ts": "2026-08-16T07:35:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "1b85ef41411357d3"
+    },
+    {
+      "id": "EV-DOC-0001-0026",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 26,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899005505",
+        "receiver": "9899008808",
+        "timestamp": "2026-08-16 16:22:00",
+        "duration": "44",
+        "amount": null,
+        "location": "Vashi"
+      },
+      "ts": "2026-08-16T10:52:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "8404d9f6f39ec4c4"
+    },
+    {
+      "id": "EV-DOC-0001-0027",
+      "documentId": "DOC-0001",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 27,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00421.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899007707",
+        "receiver": "9899009909",
+        "timestamp": "2026-08-17 07:50:00",
+        "duration": "66",
+        "amount": null,
+        "location": "Borivali_E"
+      },
+      "ts": "2026-08-17T02:20:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "6aa528de41866e3a"
+    },
+    {
+      "id": "EV-DOC-0002-0001",
+      "documentId": "DOC-0002",
+      "caseId": "CASE-2026-00435",
+      "rowIndex": 1,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00435.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899002202",
+        "receiver": "9899011011",
+        "timestamp": "2026-08-10 10:00:00",
+        "duration": "50",
+        "amount": null,
+        "location": "Thane_W"
+      },
+      "ts": "2026-08-10T04:30:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "b008a360f2e62d08"
+    },
+    {
+      "id": "EV-DOC-0002-0002",
+      "documentId": "DOC-0002",
+      "caseId": "CASE-2026-00435",
+      "rowIndex": 2,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00435.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899011011",
+        "receiver": "9899012012",
+        "timestamp": "2026-08-10 10:20:00",
+        "duration": "80",
+        "amount": null,
+        "location": "Nagpur_Wh"
+      },
+      "ts": "2026-08-10T04:50:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "2286480e580eafcd"
+    },
+    {
+      "id": "EV-DOC-0002-0003",
+      "documentId": "DOC-0002",
+      "caseId": "CASE-2026-00435",
+      "rowIndex": 3,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00435.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899002202",
+        "receiver": "9899011011",
+        "timestamp": "2026-08-11 09:15:00",
+        "duration": "44",
+        "amount": null,
+        "location": "Thane_W"
+      },
+      "ts": "2026-08-11T03:45:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "04cd9f11f4346d22"
+    },
+    {
+      "id": "EV-DOC-0002-0004",
+      "documentId": "DOC-0002",
+      "caseId": "CASE-2026-00435",
+      "rowIndex": 4,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00435.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899012012",
+        "receiver": "9899013013",
+        "timestamp": "2026-08-11 14:30:00",
+        "duration": "120",
+        "amount": null,
+        "location": "Pune_Rd"
+      },
+      "ts": "2026-08-11T09:00:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "cadf587f07b33cda"
+    },
+    {
+      "id": "EV-DOC-0002-0005",
+      "documentId": "DOC-0002",
+      "caseId": "CASE-2026-00435",
+      "rowIndex": 5,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00435.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899011011",
+        "receiver": "9899013013",
+        "timestamp": "2026-08-12 08:00:00",
+        "duration": "66",
+        "amount": null,
+        "location": "Nagpur_Wh"
+      },
+      "ts": "2026-08-12T02:30:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "df8bf692bdd789eb"
+    },
+    {
+      "id": "EV-DOC-0002-0006",
+      "documentId": "DOC-0002",
+      "caseId": "CASE-2026-00435",
+      "rowIndex": 6,
+      "type": "Call Detail Record (row)",
+      "source": "SentinelNet_demo_CDR_CASE-2026-00435.csv",
+      "uploadedBy": "AN-221",
+      "raw": {
+        "caller": "9899002202",
+        "receiver": "9899012012",
+        "timestamp": "2026-08-12 18:45:00",
+        "duration": "95",
+        "amount": null,
+        "location": "Thane_W"
+      },
+      "ts": "2026-08-12T13:15:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "fd69c9b375652000"
+    },
+    {
+      "id": "EV-DOC-0003-0001",
+      "documentId": "DOC-0003",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 1,
+      "type": "Call Detail Record (row)",
+      "source": "live-test.csv",
+      "uploadedBy": "INV-104",
+      "raw": {
+        "caller": "9876543210",
+        "receiver": "9876543211",
+        "timestamp": "2026-01-05 14:00:00",
+        "duration": "75",
+        "amount": null,
+        "location": "Tower-North"
+      },
+      "ts": "2026-01-05T08:30:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "5e464213aa2aff17"
+    },
+    {
+      "id": "EV-DOC-0003-0002",
+      "documentId": "DOC-0003",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 2,
+      "type": "Call Detail Record (row)",
+      "source": "live-test.csv",
+      "uploadedBy": "INV-104",
+      "raw": {
+        "caller": "9876543211",
+        "receiver": "9876543212",
+        "timestamp": "2026-01-05 14:30:00",
+        "duration": "120",
+        "amount": null,
+        "location": "Tower-East"
+      },
+      "ts": "2026-01-05T09:00:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "64fcfe6ecc11f549"
+    },
+    {
+      "id": "EV-DOC-0003-0003",
+      "documentId": "DOC-0003",
+      "caseId": "CASE-2026-00421",
+      "rowIndex": 3,
+      "type": "Call Detail Record (row)",
+      "source": "live-test.csv",
+      "uploadedBy": "INV-104",
+      "raw": {
+        "caller": "9876543210",
+        "receiver": "9876543212",
+        "timestamp": "2026-01-05 15:00:00",
+        "duration": "45",
+        "amount": null,
+        "location": "Tower-Central"
+      },
+      "ts": "2026-01-05T09:30:00.000Z",
+      "integrity": "VERIFIED",
+      "hash": "36d58d51e838c076"
+    }
+  ],
+  "ai_leads": [
+    {
+      "id": "LEAD-00001",
+      "kind": "COMMUNICATION_BURST",
+      "priority": "MEDIUM",
+      "confidence": 82,
+      "status": "VALIDATED",
+      "caseIds": [
+        "CASE-2026-00421"
+      ],
+      "relatedEntityIds": [
+        "ENT-00001",
+        "ENT-00002"
+      ],
+      "relatedRelationshipId": "REL-00001",
+      "what": "Analytical pattern detected — communication burst",
+      "why": [
+        "9 interactions recorded within a 2-hour window",
+        "Estimated baseline: ~8.8 interactions/day for this pair",
+        "Deviation from baseline: +3%"
+      ],
+      "evidenceIds": [
+        "EV-DOC-0001-0006",
+        "EV-DOC-0001-0009",
+        "EV-DOC-0001-0010",
+        "EV-DOC-0001-0011",
+        "EV-DOC-0001-0012",
+        "EV-DOC-0001-0013",
+        "EV-DOC-0001-0014",
+        "EV-DOC-0001-0015",
+        "EV-DOC-0001-0016"
+      ],
+      "createdAt": "2026-09-09T12:57:43.252Z",
+      "dynamic": true,
+      "documentId": "DOC-0001"
+    },
+    {
+      "id": "LEAD-00002",
+      "kind": "CROSS_CASE_IDENTIFIER",
+      "priority": "HIGH",
+      "confidence": 88,
+      "status": "NEW",
+      "caseIds": [
+        "CASE-2026-00421",
+        "CASE-2026-00435"
+      ],
+      "relatedEntityIds": [
+        "ENT-00002"
+      ],
+      "relatedRelationshipId": null,
+      "what": "Potential cross-case relationship detected",
+      "why": [
+        "The same normalized identifier (phone) was extracted from source records tagged with more than one case",
+        "Cases involved: CASE-2026-00421, CASE-2026-00435",
+        "Entity resolution confidence: 100%"
+      ],
+      "evidenceIds": [
+        "EV-DOC-0001-0001",
+        "EV-DOC-0001-0002",
+        "EV-DOC-0001-0003",
+        "EV-DOC-0001-0005",
+        "EV-DOC-0001-0006",
+        "EV-DOC-0001-0007"
+      ],
+      "createdAt": "2026-09-09T12:57:52.860Z",
+      "dynamic": true,
+      "documentId": "DOC-0002"
+    }
+  ],
+  "audit_logs": [
+    {
+      "id": "AUD-000001",
+      "who": "AN-221",
+      "userId": "AN-221",
+      "whoName": "AN-221",
+      "userName": "AN-221",
+      "role": null,
+      "action": "FILE_UPLOAD",
+      "caseId": "CASE-2026-00421",
+      "detail": "SentinelNet_demo_CDR_CASE-2026-00421.csv uploaded (CDR) — Job JOB-00001",
+      "metadata": {},
+      "ts": "2026-09-09T12:57:43.021Z"
+    },
+    {
+      "id": "AUD-000002",
+      "who": "AN-221",
+      "userId": "AN-221",
+      "whoName": "AN-221",
+      "userName": "AN-221",
+      "role": null,
+      "action": "PROCESSING_COMPLETE",
+      "caseId": "CASE-2026-00421",
+      "detail": "SentinelNet_demo_CDR_CASE-2026-00421.csv: 9 entities, 14 relationships, 27 evidence rows, 1 leads — Job JOB-00001",
+      "metadata": {},
+      "ts": "2026-09-09T12:57:52.740Z"
+    },
+    {
+      "id": "AUD-000003",
+      "who": "AN-221",
+      "userId": "AN-221",
+      "whoName": "AN-221",
+      "userName": "AN-221",
+      "role": null,
+      "action": "FILE_UPLOAD",
+      "caseId": "CASE-2026-00435",
+      "detail": "SentinelNet_demo_CDR_CASE-2026-00435.csv uploaded (CDR) — Job JOB-00002",
+      "metadata": {},
+      "ts": "2026-09-09T12:57:52.755Z"
+    },
+    {
+      "id": "AUD-000004",
+      "who": "AN-221",
+      "userId": "AN-221",
+      "whoName": "AN-221",
+      "userName": "AN-221",
+      "role": null,
+      "action": "PROCESSING_COMPLETE",
+      "caseId": "CASE-2026-00435",
+      "detail": "SentinelNet_demo_CDR_CASE-2026-00435.csv: 4 entities, 5 relationships, 6 evidence rows, 1 leads — Job JOB-00002",
+      "metadata": {},
+      "ts": "2026-09-09T12:58:35.383Z"
+    },
+    {
+      "id": "AUD-000005",
+      "who": "ADM-001",
+      "userId": "ADM-001",
+      "whoName": "A. Fernandes",
+      "userName": "A. Fernandes",
+      "role": "admin",
+      "action": "SYSTEM_SEEDED",
+      "caseId": null,
+      "detail": "Local demo database initialized from seed.js",
+      "metadata": {},
+      "ts": "2026-09-09T12:58:35.432Z"
+    },
+    {
+      "id": "AUD-000006",
+      "who": "INV-104",
+      "userId": "INV-104",
+      "whoName": "R. Deshmukh",
+      "userName": "R. Deshmukh",
+      "role": "investigator",
+      "action": "LOGIN",
+      "caseId": null,
+      "detail": "Authenticated (MFA simulated in prototype)",
+      "metadata": {},
+      "ts": "2026-09-09T13:04:20.118Z"
+    },
+    {
+      "id": "AUD-000007",
+      "who": "INV-104",
+      "userId": "INV-104",
+      "whoName": "R. Deshmukh",
+      "userName": "R. Deshmukh",
+      "role": "investigator",
+      "action": "AI_ANALYSIS_REQUESTED",
+      "caseId": "CASE-2026-00421",
+      "detail": "Case Assistant query: \"Which phone entities communicate most frequently i...\"",
+      "metadata": {},
+      "ts": "2026-09-09T13:04:22.504Z"
+    },
+    {
+      "id": "AUD-000008",
+      "who": "INV-104",
+      "userId": "INV-104",
+      "whoName": "R. Deshmukh",
+      "userName": "R. Deshmukh",
+      "role": "investigator",
+      "action": "LEAD_VALIDATED",
+      "caseId": "CASE-2026-00421",
+      "detail": "LEAD-00001",
+      "metadata": {},
+      "ts": "2026-09-09T13:04:22.524Z"
+    },
+    {
+      "id": "AUD-000009",
+      "who": "INV-104",
+      "userId": "INV-104",
+      "whoName": "R. Deshmukh",
+      "userName": "R. Deshmukh",
+      "role": "investigator",
+      "action": "REPORT_GENERATED",
+      "caseId": "CASE-2026-00421",
+      "detail": "SN-RPT-2026-000001",
+      "metadata": {},
+      "ts": "2026-09-09T13:04:22.542Z"
+    },
+    {
+      "id": "AUD-000010",
+      "who": "INV-104",
+      "userId": "INV-104",
+      "whoName": "R. Deshmukh",
+      "userName": "R. Deshmukh",
+      "role": "investigator",
+      "action": "REPORT_DOWNLOADED",
+      "caseId": "CASE-2026-00421",
+      "detail": "SN-RPT-2026-000001",
+      "metadata": {},
+      "ts": "2026-09-09T13:04:22.554Z"
+    },
+    {
+      "id": "AUD-000011",
+      "who": "INV-104",
+      "userId": "INV-104",
+      "whoName": "R. Deshmukh",
+      "userName": "R. Deshmukh",
+      "role": "investigator",
+      "action": "LOGIN",
+      "caseId": null,
+      "detail": "Authenticated (MFA simulated in prototype)",
+      "metadata": {},
+      "ts": "2026-09-09T13:04:57.046Z"
+    },
+    {
+      "id": "AUD-000012",
+      "who": "INV-104",
+      "userId": "INV-104",
+      "whoName": "INV-104",
+      "userName": "INV-104",
+      "role": null,
+      "action": "FILE_UPLOAD",
+      "caseId": "CASE-2026-00421",
+      "detail": "live-test.csv uploaded (CDR) — Job JOB-00003",
+      "metadata": {},
+      "ts": "2026-09-09T13:04:57.100Z"
+    },
+    {
+      "id": "AUD-000013",
+      "who": "INV-104",
+      "userId": "INV-104",
+      "whoName": "INV-104",
+      "userName": "INV-104",
+      "role": null,
+      "action": "PROCESSING_COMPLETE",
+      "caseId": "CASE-2026-00421",
+      "detail": "live-test.csv: 3 entities, 3 relationships, 3 evidence rows, 0 leads — Job JOB-00003",
+      "metadata": {},
+      "ts": "2026-09-09T13:04:59.525Z"
+    },
+    {
+      "id": "AUD-000014",
+      "who": "INV-104",
+      "userId": "INV-104",
+      "whoName": "R. Deshmukh",
+      "userName": "R. Deshmukh",
+      "role": "investigator",
+      "action": "LOGIN",
+      "caseId": null,
+      "detail": "Authenticated (MFA simulated in prototype)",
+      "metadata": {},
+      "ts": "2026-09-09T13:05:15.322Z"
+    }
+  ],
+  "reports": [
+    {
+      "id": "SN-RPT-2026-000001",
+      "caseId": "CASE-2026-00421",
+      "caseTitle": "Organized Financial Fraud Network",
+      "generatedAt": "2026-09-09T13:04:22.539Z",
+      "generatedBy": "INV-104",
+      "generatedByName": "R. Deshmukh",
+      "summary": {
+        "entityCount": 13,
+        "relationshipCount": 14,
+        "evidenceCount": 27,
+        "leadCount": 2,
+        "highPriorityLeadCount": 1
+      },
+      "keyEntities": [
+        {
+          "id": "ENT-00001",
+          "type": "PHONE",
+          "confidence": 100,
+          "caseIds": [
+            "CASE-2026-00421"
+          ]
+        },
+        {
+          "id": "ENT-00002",
+          "type": "PHONE",
+          "confidence": 100,
+          "caseIds": [
+            "CASE-2026-00421",
+            "CASE-2026-00435"
+          ]
+        },
+        {
+          "id": "ENT-00003",
+          "type": "PHONE",
+          "confidence": 100,
+          "caseIds": [
+            "CASE-2026-00421"
+          ]
+        },
+        {
+          "id": "ENT-00004",
+          "type": "PHONE",
+          "confidence": 100,
+          "caseIds": [
+            "CASE-2026-00421"
+          ]
+        },
+        {
+          "id": "ENT-00005",
+          "type": "PHONE",
+          "confidence": 100,
+          "caseIds": [
+            "CASE-2026-00421"
+          ]
+        },
+        {
+          "id": "ENT-00006",
+          "type": "PHONE",
+          "confidence": 100,
+          "caseIds": [
+            "CASE-2026-00421"
+          ]
+        },
+        {
+          "id": "ENT-00007",
+          "type": "PHONE",
+          "confidence": 100,
+          "caseIds": [
+            "CASE-2026-00421"
+          ]
+        },
+        {
+          "id": "ENT-00008",
+          "type": "PHONE",
+          "confidence": 100,
+          "caseIds": [
+            "CASE-2026-00421"
+          ]
+        },
+        {
+          "id": "ENT-00009",
+          "type": "PHONE",
+          "confidence": 100,
+          "caseIds": [
+            "CASE-2026-00421"
+          ]
+        },
+        {
+          "id": "ENT-00013",
+          "type": "PERSON",
+          "confidence": 90,
+          "caseIds": [
+            "CASE-2026-00421"
+          ]
+        }
+      ],
+      "keyRelationships": [
+        {
+          "id": "REL-00001",
+          "entityA": "ENT-00001",
+          "entityB": "ENT-00002",
+          "confidence": 53,
+          "band": "MEDIUM",
+          "interactions": 12,
+          "evidenceIds": [
+            "EV-DOC-0001-0001",
+            "EV-DOC-0001-0003",
+            "EV-DOC-0001-0005",
+            "EV-DOC-0001-0006",
+            "EV-DOC-0001-0009"
+          ]
+        },
+        {
+          "id": "REL-00002",
+          "entityA": "ENT-00002",
+          "entityB": "ENT-00003",
+          "confidence": 24,
+          "band": "LOW",
+          "interactions": 2,
+          "evidenceIds": [
+            "EV-DOC-0001-0002",
+            "EV-DOC-0001-0007"
+          ]
+        },
+        {
+          "id": "REL-00003",
+          "entityA": "ENT-00003",
+          "entityB": "ENT-00004",
+          "confidence": 24,
+          "band": "LOW",
+          "interactions": 2,
+          "evidenceIds": [
+            "EV-DOC-0001-0004",
+            "EV-DOC-0001-0008"
+          ]
+        },
+        {
+          "id": "REL-00004",
+          "entityA": "ENT-00004",
+          "entityB": "ENT-00005",
+          "confidence": 21,
+          "band": "LOW",
+          "interactions": 1,
+          "evidenceIds": [
+            "EV-DOC-0001-0017"
+          ]
+        },
+        {
+          "id": "REL-00005",
+          "entityA": "ENT-00005",
+          "entityB": "ENT-00006",
+          "confidence": 21,
+          "band": "LOW",
+          "interactions": 1,
+          "evidenceIds": [
+            "EV-DOC-0001-0018"
+          ]
+        },
+        {
+          "id": "REL-00006",
+          "entityA": "ENT-00002",
+          "entityB": "ENT-00006",
+          "confidence": 21,
+          "band": "LOW",
+          "interactions": 1,
+          "evidenceIds": [
+            "EV-DOC-0001-0019"
+          ]
+        },
+        {
+          "id": "REL-00007",
+          "entityA": "ENT-00001",
+          "entityB": "ENT-00007",
+          "confidence": 21,
+          "band": "LOW",
+          "interactions": 1,
+          "evidenceIds": [
+            "EV-DOC-0001-0020"
+          ]
+        },
+        {
+          "id": "REL-00008",
+          "entityA": "ENT-00007",
+          "entityB": "ENT-00008",
+          "confidence": 21,
+          "band": "LOW",
+          "interactions": 1,
+          "evidenceIds": [
+            "EV-DOC-0001-0021"
+          ]
+        },
+        {
+          "id": "REL-00009",
+          "entityA": "ENT-00003",
+          "entityB": "ENT-00007",
+          "confidence": 21,
+          "band": "LOW",
+          "interactions": 1,
+          "evidenceIds": [
+            "EV-DOC-0001-0022"
+          ]
+        },
+        {
+          "id": "REL-00010",
+          "entityA": "ENT-00006",
+          "entityB": "ENT-00009",
+          "confidence": 21,
+          "band": "LOW",
+          "interactions": 1,
+          "evidenceIds": [
+            "EV-DOC-0001-0023"
+          ]
+        }
+      ],
+      "highPriorityLeads": [
+        {
+          "id": "LEAD-00002",
+          "what": "Potential cross-case relationship detected",
+          "why": [
+            "The same normalized identifier (phone) was extracted from source records tagged with more than one case",
+            "Cases involved: CASE-2026-00421, CASE-2026-00435",
+            "Entity resolution confidence: 100%"
+          ],
+          "confidence": 88,
+          "status": "NEW",
+          "evidenceIds": [
+            "EV-DOC-0001-0001",
+            "EV-DOC-0001-0002",
+            "EV-DOC-0001-0003",
+            "EV-DOC-0001-0005",
+            "EV-DOC-0001-0006",
+            "EV-DOC-0001-0007"
+          ]
+        }
+      ],
+      "investigatorActions": [
+        {
+          "action": "LEAD_VALIDATED",
+          "who": "R. Deshmukh",
+          "ts": "2026-09-09T13:04:22.524Z",
+          "detail": "LEAD-00001"
+        }
+      ],
+      "disclaimer": "AI-generated analytical information is provided for investigative assistance only. It does not establish guilt or criminal responsibility. All findings require authorized investigator verification. Every claim above references the supporting evidence ID(s) actually stored for this case."
+    }
+  ],
+  "identity_resolution": [
+    {
+      "id": "MATCH-0001",
+      "caseId": "CASE-2026-00421",
+      "entityAId": "ENT-00013",
+      "entityBId": "ENT-00014",
+      "entityAName": "Abdul Rahim",
+      "entityBName": "Abdul Rahim Khan",
+      "nameSimilarity": 82,
+      "confidence": 82,
+      "band": "HUMAN_REVIEW",
+      "breakdown": {
+        "nameSimilarity": 82
+      },
+      "status": "PENDING",
+      "createdAt": "2026-09-09T12:58:35.426Z"
+    }
+  ],
+  "seq": {
+    "document": 3,
+    "entity": 19,
+    "relationship": 22,
+    "evidence": 0,
+    "lead": 2,
+    "report": 1,
+    "audit": 14,
+    "resolution": 1,
+    "caseNo": 0,
+    "job": 3,
+    "analysis": 1
+  },
+  "processing_jobs": [
+    {
+      "id": "JOB-00001",
+      "caseId": "CASE-2026-00421",
+      "documentId": "DOC-0001",
+      "status": "COMPLETED",
+      "currentStage": "COMPLETED",
+      "progress": 100,
+      "startedAt": "2026-09-09T12:53:33.910Z",
+      "completedAt": "2026-09-09T12:57:52.734Z",
+      "error": null,
+      "statistics": {
+        "rowCount": 27,
+        "entitiesCreated": 9,
+        "relationshipsCreated": 14,
+        "evidenceCreated": 27,
+        "leadsCreated": 1,
+        "dataQuality": {
+          "completeness": 100,
+          "identifierValidity": 100,
+          "timestampValidity": 100,
+          "duplicateRate": 100,
+          "overall": 100
+        }
+      },
+      "rowCount": 27
+    },
+    {
+      "id": "JOB-00002",
+      "caseId": "CASE-2026-00435",
+      "documentId": "DOC-0002",
+      "status": "COMPLETED",
+      "currentStage": "COMPLETED",
+      "progress": 100,
+      "startedAt": "2026-09-09T12:53:34.795Z",
+      "completedAt": "2026-09-09T12:58:35.375Z",
+      "error": null,
+      "statistics": {
+        "rowCount": 6,
+        "entitiesCreated": 4,
+        "relationshipsCreated": 5,
+        "evidenceCreated": 6,
+        "leadsCreated": 1,
+        "dataQuality": {
+          "completeness": 100,
+          "identifierValidity": 100,
+          "timestampValidity": 100,
+          "duplicateRate": 100,
+          "overall": 100
+        }
+      },
+      "rowCount": 6
+    },
+    {
+      "id": "JOB-00001",
+      "caseId": "CASE-2026-00421",
+      "documentId": "DOC-0001",
+      "status": "VALIDATING",
+      "currentStage": "VALIDATING",
+      "progress": 5,
+      "startedAt": "2026-09-09T12:55:05.627Z",
+      "completedAt": null,
+      "error": null,
+      "statistics": {}
+    },
+    {
+      "id": "JOB-00002",
+      "caseId": "CASE-2026-00435",
+      "documentId": "DOC-0002",
+      "status": "VALIDATING",
+      "currentStage": "VALIDATING",
+      "progress": 5,
+      "startedAt": "2026-09-09T12:55:10.832Z",
+      "completedAt": null,
+      "error": null,
+      "statistics": {}
+    },
+    {
+      "id": "JOB-00001",
+      "caseId": "CASE-2026-00421",
+      "documentId": "DOC-0001",
+      "status": "VALIDATING",
+      "currentStage": "VALIDATING",
+      "progress": 5,
+      "startedAt": "2026-09-09T12:56:16.141Z",
+      "completedAt": null,
+      "error": null,
+      "statistics": {}
+    },
+    {
+      "id": "JOB-00002",
+      "caseId": "CASE-2026-00435",
+      "documentId": "DOC-0002",
+      "status": "VALIDATING",
+      "currentStage": "VALIDATING",
+      "progress": 5,
+      "startedAt": "2026-09-09T12:56:21.049Z",
+      "completedAt": null,
+      "error": null,
+      "statistics": {}
+    },
+    {
+      "id": "JOB-00001",
+      "caseId": "CASE-2026-00421",
+      "documentId": "DOC-0001",
+      "status": "VALIDATING",
+      "currentStage": "VALIDATING",
+      "progress": 5,
+      "startedAt": "2026-09-09T12:57:43.016Z",
+      "completedAt": null,
+      "error": null,
+      "statistics": {}
+    },
+    {
+      "id": "JOB-00002",
+      "caseId": "CASE-2026-00435",
+      "documentId": "DOC-0002",
+      "status": "VALIDATING",
+      "currentStage": "VALIDATING",
+      "progress": 5,
+      "startedAt": "2026-09-09T12:57:52.748Z",
+      "completedAt": null,
+      "error": null,
+      "statistics": {}
+    },
+    {
+      "id": "JOB-00003",
+      "caseId": "CASE-2026-00421",
+      "documentId": "DOC-0003",
+      "status": "COMPLETED",
+      "currentStage": "COMPLETED",
+      "progress": 100,
+      "startedAt": "2026-09-09T13:04:57.085Z",
+      "completedAt": "2026-09-09T13:04:59.523Z",
+      "error": null,
+      "statistics": {
+        "rowCount": 3,
+        "entitiesCreated": 3,
+        "relationshipsCreated": 3,
+        "evidenceCreated": 3,
+        "leadsCreated": 0,
+        "dataQuality": {
+          "completeness": 100,
+          "identifierValidity": 100,
+          "timestampValidity": 100,
+          "duplicateRate": 100,
+          "overall": 100
+        }
+      },
+      "rowCount": 3
+    }
+  ],
+  "ai_analyses": [
+    {
+      "id": "AI-Q-00001",
+      "caseId": "CASE-2026-00421",
+      "analysisType": "ASSISTANT_QUERY",
+      "modelName": "openai/gpt-oss-120b",
+      "query": "Which phone entities communicate most frequently in this case?",
+      "responsePayload": {
+        "answer": "**Fact:**  \n- Relationship REL‑00001 shows **12 recorded communications** between **ENT‑00001 (+919899001101)** and **ENT‑00002 (+919899002202)**.  \n- Supporting evidence IDs: EV‑DOC‑0001‑0001, EV‑DOC‑0001‑0003, EV‑DOC‑0001‑0005, EV‑DOC‑0001‑0006, EV‑DOC‑0001‑0009, EV‑DOC‑0001‑0010, EV‑DOC‑0001‑0011, EV‑DOC‑0001‑0012, EV‑DOC‑0001‑0013, EV‑DOC‑0001‑0014, EV‑DOC‑0001‑0015 (and any additional CDRs listed under this relationship).\n\nAll other phone‑to‑phone relationships in the case have **2 or 1 recorded interaction(s)** (e.g., ENT‑00002 ↔ ENT‑00003: 2 interactions; the rest: 1 interaction).\n\n**Potential lead:** ENT‑00001 and ENT‑00002 appear to be the most frequent communicators in this network. Investigators should verify the full call logs and examine the context of these interactions for relevance to the fraud investigation."
+      },
+      "evidenceReferences": [],
+      "createdBy": "INV-104",
+      "createdAt": "2026-09-09T13:04:22.501Z"
+    }
+  ]
+}
