@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const express = require('express');
 const cors = require('cors');
 const http = require('http');
@@ -26,6 +27,13 @@ app.set('io', io);
 app.use(cors());
 app.use(express.json({ limit: '25mb' }));
 
+app.get('/api', (req, res) => res.json({
+  ok: true,
+  service: 'sentinelnet-api',
+  status: 'operational',
+  time: new Date().toISOString(),
+}));
+
 app.get('/api/health', (req, res) => res.json({
   ok: true,
   service: 'sentinelnet-api',
@@ -48,12 +56,18 @@ app.use('/api/admin', adminRoutes);   // /api/admin/audit, /api/admin/users, /ap
 app.use('/api', jobRoutes);           // /api/jobs/:id, /api/cases/:id/jobs
 app.use('/api', aiRoutes);            // /api/cases/:id/assistant, /api/cases/:id/ai-analysis
 
-// Serve the static frontend from the same origin — avoids CORS/file:// issues.
-app.use(express.static(config.CLIENT_DIR));
-app.get('*', (req, res, next) => {
-  if (req.path.startsWith('/api')) return next();
-  res.sendFile(path.join(config.CLIENT_DIR, 'index.html'));
-});
+// Serve the static frontend when directory is available (e.g. local or non-CDN)
+if (config.CLIENT_DIR && fs.existsSync(config.CLIENT_DIR)) {
+  app.use(express.static(config.CLIENT_DIR));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api')) return next();
+    const indexPath = path.join(config.CLIENT_DIR, 'index.html');
+    if (fs.existsSync(indexPath)) {
+      return res.sendFile(indexPath);
+    }
+    next();
+  });
+}
 
 app.use((err, req, res, next) => {
   console.error('[Server Error]', err);

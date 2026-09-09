@@ -1,12 +1,16 @@
 require('dotenv').config();
 const path = require('path');
+const fs = require('fs');
 
 module.exports = {
   PORT: process.env.PORT || 4000,
   JWT_SECRET: process.env.JWT_SECRET || 'dev-only-change-me-in-production',
   JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN || '8h',
   DB_FILE: process.env.DB_FILE || path.join(__dirname, 'data', 'db.json'),
-  CLIENT_DIR: path.join(__dirname, '..', '..', 'client'),
+  CLIENT_DIR: fs.existsSync(path.join(__dirname, '..', '..', 'public'))
+    ? path.join(__dirname, '..', '..', 'public')
+    : path.join(__dirname, '..', '..', 'client'),
+
 
   // Cloud Database (PostgreSQL / Supabase)
   DATABASE_URL: process.env.DATABASE_URL || process.env.SUPABASE_DB_URL || null,

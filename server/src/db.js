@@ -1,52 +1,103 @@
 const path = require('path');
 const fs = require('fs');
+const os = require('os');
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
+const Memory = require('lowdb/adapters/Memory');
 const { Pool } = require('pg');
 const config = require('./config');
 
-const dataDir = path.dirname(config.DB_FILE);
-if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+// Pre-load default seed data bundled with the application so bundler packages it
+let initialSeedData = {};
+try {
+  initialSeedData = require('./data/db.json');
+} catch (e) {
+  initialSeedData = {};
+}
 
-const adapter = new FileSync(config.DB_FILE);
-const db = low(adapter);
+let db;
+try {
+  let dbFilePath = config.DB_FILE;
+  // If running in a serverless environment (e.g. Vercel, AWS Lambda), filesystem is read-only except /tmp
+  if (process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME) {
+    dbFilePath = path.join(os.tmpdir(), 'sentinelnet-db.json');
+    if (!fs.existsSync(dbFilePath)) {
+      try {
+        fs.writeFileSync(dbFilePath, JSON.stringify(initialSeedData, null, 2));
+      } catch (writeErr) {
+        console.warn('[Database] Could not write initial db to /tmp:', writeErr.message);
+      }
+    }
+  } else {
+    const dataDir = path.dirname(dbFilePath);
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+  }
 
-// Ensure all standard collections exist
-db.defaults({
-  users: [],
-  cases: [],
-  case_access: [],
-  documents: [],
-  source_records: [],
-  entities: [],
-  entity_identifiers: [],
-  relationships: [],
-  evidence: [],
-  ai_leads: [],
-  audit_logs: [],
-  reports: [],
-  identity_resolution: [],
-  processing_jobs: [],
-  ai_analyses: [],
-  seq: {
-    document: 0,
-    entity: 0,
-    relationship: 0,
-    evidence: 0,
-    lead: 0,
-    report: 0,
-    audit: 0,
-    resolution: 0,
-    caseNo: 0,
-    job: 0,
-    analysis: 0,
-  },
-}).write();
+  // Use FileSync if writable, otherwise fallback to Memory adapter
+  try {
+    const adapter = new FileSync(dbFilePath);
+    db = low(adapter);
+  } catch (fsErr) {
+    console.warn('[Database] FileSync failed, falling back to Memory adapter:', fsErr.message);
+    const adapter = new Memory();
+    db = low(adapter);
+  }
+} catch (err) {
+  console.warn('[Database] Adapter initialization error, using Memory adapter:', err.message);
+  const adapter = new Memory();
+  db = low(adapter);
+}
+
+// Deep clone initialSeedData so collections are independent and mutation-safe
+const seedClone = JSON.parse(JSON.stringify(initialSeedData));
+
+// Ensure all standard collections exist and apply defaults
+try {
+  db.defaults({
+    users: seedClone.users || [],
+    cases: seedClone.cases || [],
+    case_access: seedClone.case_access || [],
+    documents: seedClone.documents || [],
+    source_records: seedClone.source_records || [],
+    entities: seedClone.entities || [],
+    entity_identifiers: seedClone.entity_identifiers || [],
+    relationships: seedClone.relationships || [],
+    evidence: seedClone.evidence || [],
+    ai_leads: seedClone.ai_leads || [],
+    audit_logs: seedClone.audit_logs || [],
+    reports: seedClone.reports || [],
+    identity_resolution: seedClone.identity_resolution || [],
+    processing_jobs: seedClone.processing_jobs || [],
+    ai_analyses: seedClone.ai_analyses || [],
+    seq: seedClone.seq || {
+      document: 0,
+      entity: 0,
+      relationship: 0,
+      evidence: 0,
+      lead: 0,
+      report: 0,
+      audit: 0,
+      resolution: 0,
+      caseNo: 0,
+      job: 0,
+      analysis: 0,
+    },
+  }).write();
+} catch (writeErr) {
+  console.warn('[Database] Initial db.defaults().write() skipped or warned:', writeErr.message);
+}
+
 
 function nextSeq(key) {
   const current = db.get(`seq.${key}`).value() || 0;
   const n = current + 1;
-  db.set(`seq.${key}`, n).write();
+  try {
+    db.set(`seq.${key}`, n).write();
+  } catch (err) {
+    db.set(`seq.${key}`, n);
+  }
   return n;
 }
 
@@ -57,10 +108,17 @@ if (config.DATABASE_URL) {
     pgPool = new Pool({
       connectionString: config.DATABASE_URL,
       ssl: config.DATABASE_URL.includes('localhost') ? false : { rejectUnauthorized: false },
+      connectionTimeoutMillis: 5000,
+      idleTimeoutMillis: 10000,
+      max: 2,
+    });
+    pgPool.on('error', (err) => {
+      console.warn('[Database] Unexpected PostgreSQL pool client error (idle client):', err.message);
     });
     console.log('[Database] PostgreSQL pool initialized for:', config.DATABASE_URL.replace(/:[^:@]+@/, ':***@'));
   } catch (err) {
     console.warn('[Database] Warning: Could not initialize pgPool:', err.message);
+    pgPool = null;
   }
 }
 
@@ -69,7 +127,12 @@ if (config.DATABASE_URL) {
  */
 async function queryPg(text, params) {
   if (!pgPool) return null;
-  return await pgPool.query(text, params);
+  try {
+    return await pgPool.query(text, params);
+  } catch (err) {
+    console.warn('[Database] queryPg error:', err.message);
+    return null;
+  }
 }
 
 /**
@@ -91,11 +154,6 @@ async function initPgSchema() {
   return false;
 }
 
-// Auto-run schema check if pg is configured
-if (pgPool) {
-  initPgSchema().catch(err => console.error('[Database] Schema init error:', err));
-}
-
 module.exports = {
   db,
   nextSeq,
@@ -103,3 +161,4 @@ module.exports = {
   queryPg,
   initPgSchema,
 };
+
